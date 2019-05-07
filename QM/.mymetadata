@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="QM"
+  id="myeclipse.1545212140644"
+  context-root="/QM"
+  j2ee-spec="5.0"
+  archive="QM.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

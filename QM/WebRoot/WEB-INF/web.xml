@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>toIndex.jsp</welcome-file>
+	</welcome-file-list>
+	<display-name></display-name>
+	<!-- 全站参数配置 -->
+	<context-param>
+		<description>全站编码配置</description>
+		<param-name>encode</param-name>
+		<param-value>utf-8</param-value>
+	</context-param>
+    <!-- 监听器配置开始 -->
+		<listener>
+			<listener-class>listener.MyHSessionListener</listener-class>
+		</listener>
+	<!-- 监听器配置结束 -->
+	<filter>
+		<description>全站乱码过滤器</description>
+		<filter-name>EncodeFilter</filter-name>
+		<filter-class>filter.EncodeFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodeFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>servlet.Register</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>PetInfoList</servlet-name>
+    <servlet-class>servlet.PetInfoList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PetInfo</servlet-name>
+    <servlet-class>servlet.PetInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BazaarList</servlet-name>
+    <servlet-class>servlet.BazaarList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoodInfo</servlet-name>
+    <servlet-class>servlet.GoodInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Comment</servlet-name>
+    <servlet-class>servlet.CommentList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminLogin</servlet-name>
+    <servlet-class>servlet.AdminLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsList</servlet-name>
+    <servlet-class>servlet.NewsList</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>NewsList1</servlet-name>
+    <servlet-class>servlet.NewsList1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DynamicsList</servlet-name>
+    <servlet-class>servlet.DynamicsList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <servlet-class>servlet.UserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>servlet.UpdateUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListUser</servlet-name>
+    <servlet-class>servlet.ListUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReturnHome</servlet-name>
+    <servlet-class>servlet.ReturnHome</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoveAdoption</servlet-name>
+    <servlet-class>servlet.LoveAdoption</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindNewsList</servlet-name>
+    <servlet-class>servlet.FindNewsList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdoptionList</servlet-name>
+    <servlet-class>servlet.AdoptionList</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PageCustServlet</servlet-name>
+    <servlet-class>servlet.PageCustServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AccountList</servlet-name>
+    <servlet-class>servlet.AccountList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindPets</servlet-name>
+    <servlet-class>servlet.FindPets</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindPets_1</servlet-name>
+    <servlet-class>servlet.FindPets_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindLoveAdoption</servlet-name>
+    <servlet-class>servlet.FindLoveAdoption</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindLoveAdoption_1</servlet-name>
+    <servlet-class>servlet.FindLoveAdoption_1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddShoppingCar</servlet-name>
+    <servlet-class>servlet.AddShoppingCar</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelCartServlet</servlet-name>
+    <servlet-class>servlet.DelCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeCartServlet</servlet-name>
+    <servlet-class>servlet.ChangeCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <servlet-class>servlet.ClearCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <servlet-class>servlet.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServlet</servlet-name>
+    <servlet-class>servlet.OrderListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexList</servlet-name>
+    <servlet-class>servlet.IndexList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <servlet-class>servlet.DelOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayServlet</servlet-name>
+    <servlet-class>servlet.PayServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Callback</servlet-name>
+    <servlet-class>servlet.Callback</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminUserServlet</servlet-name>
+    <servlet-class>adminServlet.AdminUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelUserServlet</servlet-name>
+    <servlet-class>adminServlet.DelUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditUserServlet</servlet-name>
+    <servlet-class>adminServlet.EditUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateUserInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindUserName</servlet-name>
+    <servlet-class>adminServlet.FindUserName</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminNewsServlet</servlet-name>
+    <servlet-class>adminServlet.AdminNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddNewsServlet</servlet-name>
+    <servlet-class>adminServlet.AddNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminAdoptionServlet</servlet-name>
+    <servlet-class>adminServlet.AdminAdoptionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ImgServlet</servlet-name>
+    <servlet-class>adminServlet.ImgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelAdoptServlet</servlet-name>
+    <servlet-class>adminServlet.DelAdoptServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditAdoptServlet</servlet-name>
+    <servlet-class>adminServlet.EditAdoptServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateAdoptInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateAdoptInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindAdoptName</servlet-name>
+    <servlet-class>adminServlet.FindAdoptName</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminInfoServlet</servlet-name>
+    <servlet-class>adminServlet.AdminInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateAdminInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateAdminInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <servlet-class>adminServlet.AdminLogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminPetsServlet</servlet-name>
+    <servlet-class>adminServlet.AdminPetsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddPetsServlet</servlet-name>
+    <servlet-class>adminServlet.AddPetsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindPetsName</servlet-name>
+    <servlet-class>adminServlet.FindPetsName</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelPetsServlet</servlet-name>
+    <servlet-class>adminServlet.DelPetsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditPetsServlet</servlet-name>
+    <servlet-class>adminServlet.EditPetsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDatePetInfo</servlet-name>
+    <servlet-class>adminServlet.UpDatePetInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindNewsTitle</servlet-name>
+    <servlet-class>adminServlet.FindNewsTitle</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelNewsServlet</servlet-name>
+    <servlet-class>adminServlet.DelNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditNewsServlet</servlet-name>
+    <servlet-class>adminServlet.EditNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateNewsInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateNewsInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminDynaServlet</servlet-name>
+    <servlet-class>adminServlet.AdminDynaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindDynaTitle</servlet-name>
+    <servlet-class>adminServlet.FindDynaTitle</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelDynaServlet</servlet-name>
+    <servlet-class>adminServlet.DelDynaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditDynaServlet</servlet-name>
+    <servlet-class>adminServlet.EditDynaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateDynamicsInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateDynamicsInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <servlet-class>adminServlet.AdminOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindOrderName</servlet-name>
+    <servlet-class>adminServlet.FindOrderName</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelOrdersServlet</servlet-name>
+    <servlet-class>adminServlet.DelOrdersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditOrdersServlet</servlet-name>
+    <servlet-class>adminServlet.EditOrdersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateOrdersInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateOrdersInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddDynaServlet</servlet-name>
+    <servlet-class>adminServlet.AddDynaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminGoodsServlet</servlet-name>
+    <servlet-class>adminServlet.AdminGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindGoodsName</servlet-name>
+    <servlet-class>adminServlet.FindGoodsName</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelGoodsServlet</servlet-name>
+    <servlet-class>adminServlet.DelGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddGoodsServlet</servlet-name>
+    <servlet-class>adminServlet.AddGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditGoodsServlet</servlet-name>
+    <servlet-class>adminServlet.EditGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateGoodsInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateGoodsInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminMgmentServlet</servlet-name>
+    <servlet-class>adminServlet.AdminMgmentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindCommentTimer</servlet-name>
+    <servlet-class>adminServlet.FindCommentTimer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelCommentsServlet</servlet-name>
+    <servlet-class>adminServlet.DelCommentsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminAccountServlet</servlet-name>
+    <servlet-class>adminServlet.AdminAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindAccountDate</servlet-name>
+    <servlet-class>adminServlet.FindAccountDate</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelAccountServlet</servlet-name>
+    <servlet-class>adminServlet.DelAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>newsContent</servlet-name>
+    <servlet-class>servlet.newsContent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>dynaContentServlet</servlet-name>
+    <servlet-class>servlet.dynaContentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>accountContent</servlet-name>
+    <servlet-class>servlet.accountContent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAccountServlet</servlet-name>
+    <servlet-class>adminServlet.AddAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditAccountServlet</servlet-name>
+    <servlet-class>adminServlet.EditAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpDateAccountInfo</servlet-name>
+    <servlet-class>adminServlet.UpDateAccountInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelUserServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelPetServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelPetServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelGoodsServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelGoodsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelOrdersServlet</servlet-name>
+    <servlet-class>dao.BatchDelOrdersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelMsgServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelMsgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelNewsServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelDynaServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelDynaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BatchDelAccountServlet</servlet-name>
+    <servlet-class>adminServlet.BatchDelAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveWordServlet</servlet-name>
+    <servlet-class>servlet.LeaveWordServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PetInfoList</servlet-name>
+    <url-pattern>/PetInfoList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PetInfo</servlet-name>
+    <url-pattern>/PetInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BazaarList</servlet-name>
+    <url-pattern>/BazaarList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodInfo</servlet-name>
+    <url-pattern>/GoodInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Comment</servlet-name>
+    <url-pattern>/Comment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogin</servlet-name>
+    <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsList</servlet-name>
+    <url-pattern>/NewsList</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>NewsList1</servlet-name>
+    <url-pattern>/NewsList1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DynamicsList</servlet-name>
+    <url-pattern>/DynamicsList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserInfoServlet</servlet-name>
+    <url-pattern>/UserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/UpdateUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListUser</servlet-name>
+    <url-pattern>/ListUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReturnHome</servlet-name>
+    <url-pattern>/ReturnHome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoveAdoption</servlet-name>
+    <url-pattern>/LoveAdoption</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindNewsList</servlet-name>
+    <url-pattern>/FindNewsList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdoptionList</servlet-name>
+    <url-pattern>/AdoptionList</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageCustServlet</servlet-name>
+    <url-pattern>/PageCustServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AccountList</servlet-name>
+    <url-pattern>/AccountList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPets</servlet-name>
+    <url-pattern>/FindPets</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPets_1</servlet-name>
+    <url-pattern>/FindPets_1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindLoveAdoption</servlet-name>
+    <url-pattern>/FindLoveAdoption</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindLoveAdoption_1</servlet-name>
+    <url-pattern>/FindLoveAdoption_1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShoppingCar</servlet-name>
+    <url-pattern>/AddShoppingCar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCartServlet</servlet-name>
+    <url-pattern>/DelCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeCartServlet</servlet-name>
+    <url-pattern>/ChangeCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <url-pattern>/ClearCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServlet</servlet-name>
+    <url-pattern>/AddOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServlet</servlet-name>
+    <url-pattern>/OrderListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexList</servlet-name>
+    <url-pattern>/IndexList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrderServlet</servlet-name>
+    <url-pattern>/DelOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayServlet</servlet-name>
+    <url-pattern>/PayServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Callback</servlet-name>
+    <url-pattern>/Callback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminUserServlet</servlet-name>
+    <url-pattern>/AdminUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelUserServlet</servlet-name>
+    <url-pattern>/DelUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditUserServlet</servlet-name>
+    <url-pattern>/EditUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateUserInfo</servlet-name>
+    <url-pattern>/UpDateUserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindUserName</servlet-name>
+    <url-pattern>/FindUserName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminNewsServlet</servlet-name>
+    <url-pattern>/AdminNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddNewsServlet</servlet-name>
+    <url-pattern>/AddNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminAdoptionServlet</servlet-name>
+    <url-pattern>/AdminAdoptionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImgServlet</servlet-name>
+    <url-pattern>/ImgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelAdoptServlet</servlet-name>
+    <url-pattern>/DelAdoptServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditAdoptServlet</servlet-name>
+    <url-pattern>/EditAdoptServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateAdoptInfo</servlet-name>
+    <url-pattern>/UpDateAdoptInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAdoptName</servlet-name>
+    <url-pattern>/FindAdoptName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminInfoServlet</servlet-name>
+    <url-pattern>/AdminInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateAdminInfo</servlet-name>
+    <url-pattern>/UpDateAdminInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <url-pattern>/AdminLogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminPetsServlet</servlet-name>
+    <url-pattern>/AdminPetsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddPetsServlet</servlet-name>
+    <url-pattern>/AddPetsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindPetsName</servlet-name>
+    <url-pattern>/FindPetsName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelPetsServlet</servlet-name>
+    <url-pattern>/DelPetsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditPetsServlet</servlet-name>
+    <url-pattern>/EditPetsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDatePetInfo</servlet-name>
+    <url-pattern>/UpDatePetInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindNewsTitle</servlet-name>
+    <url-pattern>/FindNewsTitle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelNewsServlet</servlet-name>
+    <url-pattern>/DelNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditNewsServlet</servlet-name>
+    <url-pattern>/EditNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateNewsInfo</servlet-name>
+    <url-pattern>/UpDateNewsInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminDynaServlet</servlet-name>
+    <url-pattern>/AdminDynaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindDynaTitle</servlet-name>
+    <url-pattern>/FindDynaTitle</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelDynaServlet</servlet-name>
+    <url-pattern>/DelDynaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditDynaServlet</servlet-name>
+    <url-pattern>/EditDynaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateDynamicsInfo</servlet-name>
+    <url-pattern>/UpDateDynamicsInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <url-pattern>/AdminOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrderName</servlet-name>
+    <url-pattern>/FindOrderName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrdersServlet</servlet-name>
+    <url-pattern>/DelOrdersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditOrdersServlet</servlet-name>
+    <url-pattern>/EditOrdersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateOrdersInfo</servlet-name>
+    <url-pattern>/UpDateOrdersInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddDynaServlet</servlet-name>
+    <url-pattern>/AddDynaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminGoodsServlet</servlet-name>
+    <url-pattern>/AdminGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindGoodsName</servlet-name>
+    <url-pattern>/FindGoodsName</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelGoodsServlet</servlet-name>
+    <url-pattern>/DelGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddGoodsServlet</servlet-name>
+    <url-pattern>/AddGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditGoodsServlet</servlet-name>
+    <url-pattern>/EditGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateGoodsInfo</servlet-name>
+    <url-pattern>/UpDateGoodsInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminMgmentServlet</servlet-name>
+    <url-pattern>/AdminMgmentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindCommentTimer</servlet-name>
+    <url-pattern>/FindCommentTimer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCommentsServlet</servlet-name>
+    <url-pattern>/DelCommentsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminAccountServlet</servlet-name>
+    <url-pattern>/AdminAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAccountDate</servlet-name>
+    <url-pattern>/FindAccountDate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelAccountServlet</servlet-name>
+    <url-pattern>/DelAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>newsContent</servlet-name>
+    <url-pattern>/newsContent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>dynaContentServlet</servlet-name>
+    <url-pattern>/dynaContentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>accountContent</servlet-name>
+    <url-pattern>/accountContent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAccountServlet</servlet-name>
+    <url-pattern>/AddAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditAccountServlet</servlet-name>
+    <url-pattern>/EditAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDateAccountInfo</servlet-name>
+    <url-pattern>/UpDateAccountInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelServlet</servlet-name>
+    <url-pattern>/BatchDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelUserServlet</servlet-name>
+    <url-pattern>/BatchDelUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelPetServlet</servlet-name>
+    <url-pattern>/BatchDelPetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelGoodsServlet</servlet-name>
+    <url-pattern>/BatchDelGoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelOrdersServlet</servlet-name>
+    <url-pattern>/BatchDelOrdersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelMsgServlet</servlet-name>
+    <url-pattern>/BatchDelMsgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelNewsServlet</servlet-name>
+    <url-pattern>/BatchDelNewsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelDynaServlet</servlet-name>
+    <url-pattern>/BatchDelDynaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BatchDelAccountServlet</servlet-name>
+    <url-pattern>/BatchDelAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveWordServlet</servlet-name>
+    <url-pattern>/LeaveWordServlet</url-pattern>
+  </servlet-mapping>
+ 
+  
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
